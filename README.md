@@ -10,7 +10,6 @@ The premise is bringing golf to the tabletop via dice roll mechanics and a DnD s
 6) A Players shot consists of the following stages
    - Choosing aim point on hole map + distance to hit
    - Choosing a club to hit
-   - Option for shot modifiers / abilities
    - Rolling the designated dice on the club
    - Calculate result of swing
    - GM calculates wind + kick results
@@ -53,8 +52,7 @@ After each 3-hole Match, a post-match cart girl break will begin.
    - choosing a single ability to take (One only per golfer)
 3) All charges of "Lucky Bounce" are refreshed
 
+## End of Round Overview
+After a full round of 18 holes (6 full 3-hole Matches) each players golfer has evolved into a highly skilled player. Strokes are tallied up. The player with the lowest score is the winner. In the event of a tie, each tied golfer will play a Playoff Match of another three holes.
 
-
-
-
-
+Before the playoff match, there will be one final visit from the cart girl. She will have clubs, shot modifiers, and abilities to choose from. Only one of each may be taken. If there is still a tie after the Playoff Match, another is played. There will be no more cart girl visits.
