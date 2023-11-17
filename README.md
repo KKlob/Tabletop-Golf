@@ -10,6 +10,7 @@ The premise is bringing golf to the tabletop via dice roll mechanics and a DnD s
 6) A Players shot consists of the following stages
    - Choosing aim point on hole map + distance to hit
    - Choosing a club to hit
+   - Option for shot modifiers / abilities
    - Rolling the designated dice on the club
    - Calculate result of swing
    - GM calculates wind + kick results
