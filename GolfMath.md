@@ -35,13 +35,13 @@ Every club has it's own features for roll requirements as well as how a golfer's
 	<tr>
 		<td> Drivers </td>
 		<td> Power / Technique / Control </td>
-		<td> Control / Finesse </td>
+		<td> Control </td>
 		<td> Finesse </td>
 	</tr>
 	<tr>
 		<td> Fairway Woods </td>
 		<td> Power / Technique </td>
-		<td> Control / Finesse </td>
+		<td> Control </td>
 		<td> Finesse </td>
 	</tr>
 	<tr>
@@ -64,9 +64,9 @@ Every club has it's own features for roll requirements as well as how a golfer's
 	</tr>
 	<tr>
 		<td> Putters </td>
-		<td> Technique </td>
-		<td> Power / Control / Finesse </td>
-		<td> Power / Control / Finesse </td>
+		<td> Technique / Control </td>
+		<td> Power </td>
+		<td> Finesse </td>
 	</tr>
 </table>
 
@@ -86,98 +86,98 @@ Every club has it's own features for roll requirements as well as how a golfer's
 	<tr>
 		<td> Rental </td>
 		<td> Driver (D20) </td>
-		<td> 15 </td>
-		<td> 8-11 </td>
-		<td> 8-11 </td>
-		<td> 6-13 </td>
+		<td> 18 | 1.5</td>
+		<td> 7-12 | 1.5</td>
+		<td> 8-11 | 1.5</td>
+		<td> 5-14 | 1.5</td>
 		<td> 230 </td>
 		<td> 20 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> 3 Wood </td>
-		<td> 15 </td>
-		<td> 8-11 </td>
-		<td> 8-11 </td>
-		<td> 7-12 </td>
+		<td> 3 Wood (D20) </td>
+		<td> 17 | 1.5</td>
+		<td> 8-11 | 1.5</td>
+		<td> 7-12 | 1.5</td>
+		<td> 6-13 | 1.5</td>
 		<td> 200 </td>
 		<td> 15 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> 6 Iron </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
+		<td> 6 Iron (D20) </td>
+		<td> 16 | 1.5</td>
+		<td> 8-11 | 1.5</td>
+		<td> 7-12 | 1.5 </td>
+		<td> 6-13 </td>
 		<td> 180 </td>
 		<td> 6 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> 7 Iron </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
+		<td> 7 Iron (D20) </td>
+		<td> 15 | 1.5 </td>
+		<td> 8-11 </td>
+		<td> 7-12 </td>
+		<td> 7-12 </td>
 		<td> 160 </td>
 		<td> 5 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> 8 Iron </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
+		<td> 8 Iron (D20) </td>
+		<td> 14 | 1.5 </td>
+		<td> 8-11 | 1.5 </td>
+		<td> 7-12 | 1.5 </td>
+		<td> 7-12 | 1.5 </td>
 		<td> 145 </td>
 		<td> 4 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> 9 Iron </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
+		<td> 9 Iron (D20) </td>
+		<td> 13 | 1.5 </td>
+		<td> 8-11 | 1.5 </td>
+		<td> 7-12 | 1.5 </td>
+		<td> 8-11 | 1.5 </td>
 		<td> 130 </td>
 		<td> 4 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> Pitching Wedge </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
+		<td> Pitching Wedge (D20) </td>
+		<td> 12 | 1.5 </td>
+		<td> 8-11 | 1.5</td>
+		<td> 7-12 | 1.5</td>
+		<td> 8-11 | 1.5</td>
 		<td> 115 </td>
 		<td> 3 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> Sand Wedge </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
+		<td> Sand Wedge (D20) </td>
+		<td> 11 | 1.5 </td>
+		<td> 8-11 | 1.5 </td>
+		<td> 6-13 | 1.5 </td>
+		<td> 8-11 | 1.5 </td>
 		<td> 90 </td>
 		<td> 2 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> Putter </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
-		<td> TBD </td>
+		<td> Putter (D20) </td>
+		<td> 17 | 1.5 </td>
+		<td> 9-10 | 1.5 </td>
+		<td> 6-13 | 1.5 </td>
+		<td> 6-13 </td>
 		<td> N/A </td>
 		<td> N/A </td>
 		<td> None </td>
