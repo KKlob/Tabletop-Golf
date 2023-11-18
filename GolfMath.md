@@ -23,7 +23,9 @@ Attributes determine the Golfer's strengths and weaknesses. Clarity and Simplici
 #### Luck: Influences kick + lucky saving throws. Main influence in determining hole outs vs. tap-in putts.
 
 ## Clubs
-Every club has it's own features for roll requirements as well as how a golfer's stats affect the swing. Each category of club (Driver, Fairway Wood, Iron, Wedge, Putter) will have different ways stats affect a swing result as well as within each category of club. The table below outlines all of the clubs currently in the game as well as the roll requirements and modifiers for each.
+Every club has it's own features for roll requirements as well as how a golfer's stats affect the swing. Each category of club (Driver, Fairway Wood, Iron, Wedge, Putter) will have different ways stats affect a swing result as well as within each category of club. A club's Power roll is always used as the Primary value for distance calculation. A club will also have a combination of two attributes that will weigh into the distance calculation (Technique / Control / Finesse)
+
+The table below outlines all of the clubs currently in the game as well as the roll requirements and modifiers for each.
 
 <table>
 	<tr>
@@ -196,4 +198,76 @@ Each hole will have a map with a hex grid overlaid on top. Each hex will represe
  - Distance: XXX yards
  - Left / Right: +/- XXX yards
 To determine where the ball rests, follow the aim line out to Distance, then move left/right.
+
+The distance a ball will go depends on the Golfer and the club they swing. Distance is primarily weighted by a swing's Power roll as well as by a club's Primary and Secondary attributes (Technique / Control / Finesse). 
+
+Putting is a separate calculation and will be explained later.
+
+#### Power - Main attribute for distance
+If the Power roll meets/exceeds the roll requirement, the distance calculation starts with the following:
+  - Distance = Aim Point Distance.
+
+If the Power roll hits the highest value (EX: D20 rolls a 20), the distance calculation starts with the following:
+ - Distance = Aim Point Distance + ( APD * 10%)
+ - Clubs can change this to be more than just highest value (?)
+
+If the Power roll does not meet the roll requirement, The distance calculation starts with the following:
+ - Pd = Aim Point Distance * (Power Roll / Power Req)
+
+#### Primary and Secondary - Attributes that affect Distance
+If both attributes meet their breakpoints, no additional calculation is necessary
+
+If Primary / Secondary attribute fails to meet breakpoint, we find the difference between the roll and the breakpoint. The chart below outlines how it affects distance:
+
+<table>
+	<tr>
+		<th> Difference </th>
+		<th> Primary </th>
+		<th> Secondary </th>
+	</tr>
+	<tr>
+		<td> 1 </td>
+		<td> 3% </td>
+		<td> 1% </td>
+	</tr>
+	<tr>
+		<td> 2 </td>
+		<td> 5% </td>
+		<td> 2% </td>
+	</tr>
+	<tr>
+		<td> 3 </td>
+		<td> 8% </td>
+		<td> 4% </td>
+	</tr>
+	<tr>
+		<td> 4 </td>
+		<td> 12% </td>
+		<td> 7% </td>
+	</tr>
+	<tr>
+		<td> 5 </td>
+		<td> 17% </td>
+		<td> 11% </td>
+	</tr>
+	<tr>
+		<td> 6 </td>
+		<td> 23% </td>
+		<td> 15% </td>
+	</tr>
+	<tr>
+		<td> 7 </td>
+		<td> 30% </td>
+		<td> 20% </td>
+	</tr>
+	<tr>
+		<td> 8 </td>
+		<td> 38% </td>
+		<td> 26% </td>
+	</tr>
+</table>
+    
+Distance calculation is as follows:
+ - Distance = Pd - ( [ Pd * Primary ] + [ Pd * Secondary ] )
+
 
