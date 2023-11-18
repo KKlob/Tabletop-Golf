@@ -2,16 +2,25 @@
 
 This will be a working document on how the stats, clubs, swings, and distances are done. This will provide the basic structure for the math and code that follows.
 
-## Stats
+## Attributes
+Attributes determine the Golfer's strengths and weaknesses. Clarity and Simplicity in attributes is top-most priority as it will drive what clothes / clubs / shot modifiers / abilities a player will choose to get their Golfer ahead of the competition. A Golfer's game has been divided into 4 main swing attributes and a luck attribute (as luck is a functional component of the real game). Any golf club will have a base modifier for each attribute (X) that helps determine how a player's skill influences the shot (rounded to the nearest 0.5). Some clubs take advantage of a high-skill player while others offer more forgiveness for low-skilled players. Clothes will also add certain modifiers to a golfer's stats. 
+
 #### Power: Main influence in determining distance. 
- - Roll >= Power req.
+ - Shot Power >= Club Power Req
+ - Shot Power = Power roll + (Power Stat / X )
 #### Technique: Main influence in determining contact with the ball.
- - Low req <= Roll <= High req
+ - Low Req <= Technique Req <= High req 
+ - Shot Technique = Technique roll
+ - Technique stat / X = additional forgiveness to Technique Roll
 #### Control: Main influence in determining control over ball flight.
  - Low req <= Roll <= High req
+ - Shot Control = Control Roll
+ - Control stat / X = additional forgiveness to Control Roll
 #### Finesse: Main influence in determining ball spin + kick
  - Low req <= Roll <= High req
-#### Luck: Influences kick + lucky saving throws. Main influence in determining hole outs / close putts.
+ - Shot Finesse = Finesse Roll
+ - Finesse stat / X = additional forgiveness to Finesse Roll
+#### Luck: Influences kick + lucky saving throws. Main influence in determining hole outs vs. tap-in putts.
 
 ## Clubs
 Every club has it's own features for roll requirements as well as how a golfer's stats affect the swing. Each category of club (Driver, Fairway Wood, Iron, Wedge, Putter) will have different ways stats affect a swing result as well as within each category of club. The table below outlines all of the clubs currently in the game as well as the roll requirements and modifiers for each.
