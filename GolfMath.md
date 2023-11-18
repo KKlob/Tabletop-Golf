@@ -87,8 +87,8 @@ Every club has it's own features for roll requirements as well as how a golfer's
 		<td> Rental </td>
 		<td> Driver (D20) </td>
 		<td> 18 | 1.5</td>
-		<td> 7-12 | 1.5</td>
 		<td> 8-11 | 1.5</td>
+		<td> 7-12 | 1.5</td>
 		<td> 5-14 | 1.5</td>
 		<td> 230 </td>
 		<td> 20 </td>
@@ -96,7 +96,7 @@ Every club has it's own features for roll requirements as well as how a golfer's
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> 3 Wood (D20) </td>
+		<td> 3 Fairway Wood (D20) </td>
 		<td> 17 | 1.5</td>
 		<td> 8-11 | 1.5</td>
 		<td> 7-12 | 1.5</td>
@@ -108,10 +108,10 @@ Every club has it's own features for roll requirements as well as how a golfer's
 	<tr>
 		<td> Rental </td>
 		<td> 6 Iron (D20) </td>
-		<td> 16 | 1.5</td>
+		<td> 16 | 1.5 </td>
 		<td> 8-11 | 1.5</td>
 		<td> 7-12 | 1.5 </td>
-		<td> 6-13 </td>
+		<td> 6-13 | 1.5 </td>
 		<td> 180 </td>
 		<td> 6 </td>
 		<td> None </td>
@@ -144,7 +144,7 @@ Every club has it's own features for roll requirements as well as how a golfer's
 		<td> 13 | 1.5 </td>
 		<td> 8-11 | 1.5 </td>
 		<td> 7-12 | 1.5 </td>
-		<td> 8-11 | 1.5 </td>
+		<td> 7-12 | 1.5 </td>
 		<td> 130 </td>
 		<td> 4 </td>
 		<td> None </td>
@@ -154,7 +154,7 @@ Every club has it's own features for roll requirements as well as how a golfer's
 		<td> Pitching Wedge (D20) </td>
 		<td> 12 | 1.5 </td>
 		<td> 8-11 | 1.5</td>
-		<td> 7-12 | 1.5</td>
+		<td> 6-13 | 1.5</td>
 		<td> 8-11 | 1.5</td>
 		<td> 115 </td>
 		<td> 3 </td>
@@ -174,10 +174,10 @@ Every club has it's own features for roll requirements as well as how a golfer's
 	<tr>
 		<td> Rental </td>
 		<td> Putter (D20) </td>
-		<td> 17 | 1.5 </td>
-		<td> 9-10 | 1.5 </td>
+		<td> 14 | 1.5 </td>
+		<td> 8-11 | 1.5 </td>
+		<td> 8-11 | 1.5 </td>
 		<td> 6-13 | 1.5 </td>
-		<td> 6-13 </td>
 		<td> N/A </td>
 		<td> N/A </td>
 		<td> None </td>
