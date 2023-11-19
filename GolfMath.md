@@ -73,6 +73,8 @@ The table below outlines all of the clubs currently in the game as well as the r
 </table>
 
 ----------------------
+( P ) = Primary Attribute
+( S ) = Secondary Attribute
 <table>
 	<tr>
 		<th> Club Brand </th>
@@ -82,95 +84,86 @@ The table below outlines all of the clubs currently in the game as well as the r
 		<th> Control Req </th>
 		<th> Finesse Req </th>
 		<th> Max Carry Distance </th>
-		<th> Max Rollout Distance </th>
 		<th> Club modifiers </th>
 	</tr>
 	<tr>
 		<td> Rental </td>
 		<td> Driver (D20) </td>
 		<td> 18 | 1.5</td>
-		<td> 8-11 | 1.5</td>
-		<td> 7-12 | 1.5</td>
+		<td> 8-11 | 1.5 (P)</td>
+		<td> 7-12 | 1.5 (S)</td>
 		<td> 5-14 | 1.5</td>
 		<td> 230 </td>
-		<td> 20 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
 		<td> 3 Fairway Wood (D20) </td>
 		<td> 17 | 1.5</td>
-		<td> 8-11 | 1.5</td>
-		<td> 7-12 | 1.5</td>
+		<td> 8-11 | 1.5 (P) </td>
+		<td> 7-12 | 1.5 (S) </td>
 		<td> 6-13 | 1.5</td>
-		<td> 200 </td>
-		<td> 15 </td>
+		<td> 190 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
 		<td> 6 Iron (D20) </td>
 		<td> 16 | 1.5 </td>
-		<td> 8-11 | 1.5</td>
-		<td> 7-12 | 1.5 </td>
+		<td> 8-11 | 1.5 (P) </td>
+		<td> 7-12 | 1.5 (S) </td>
 		<td> 6-13 | 1.5 </td>
-		<td> 180 </td>
-		<td> 6 </td>
+		<td> 175 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
 		<td> 7 Iron (D20) </td>
 		<td> 15 | 1.5 </td>
-		<td> 8-11 </td>
-		<td> 7-12 </td>
+		<td> 8-11 | 1.5 (P) </td>
+		<td> 7-12 | 1.5 (S)</td>
 		<td> 7-12 </td>
 		<td> 160 </td>
-		<td> 5 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
 		<td> 8 Iron (D20) </td>
 		<td> 14 | 1.5 </td>
-		<td> 8-11 | 1.5 </td>
+		<td> 8-11 | 1.5 (P) </td>
 		<td> 7-12 | 1.5 </td>
-		<td> 7-12 | 1.5 </td>
+		<td> 7-12 | 1.5 (S) </td>
 		<td> 145 </td>
-		<td> 4 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
 		<td> 9 Iron (D20) </td>
 		<td> 13 | 1.5 </td>
-		<td> 8-11 | 1.5 </td>
+		<td> 8-11 | 1.5 (P) </td>
 		<td> 7-12 | 1.5 </td>
-		<td> 7-12 | 1.5 </td>
+		<td> 7-12 | 1.5 (S) </td>
 		<td> 130 </td>
-		<td> 4 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
 		<td> Pitching Wedge (D20) </td>
 		<td> 12 | 1.5 </td>
-		<td> 8-11 | 1.5</td>
+		<td> 8-11 | 1.5 (S) </td>
 		<td> 6-13 | 1.5</td>
-		<td> 8-11 | 1.5</td>
+		<td> 8-11 | 1.5 (P) </td>
 		<td> 115 </td>
-		<td> 3 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
 		<td> Sand Wedge (D20) </td>
 		<td> 11 | 1.5 </td>
-		<td> 8-11 | 1.5 </td>
+		<td> 8-11 | 1.5 (S) </td>
 		<td> 6-13 | 1.5 </td>
-		<td> 8-11 | 1.5 </td>
+		<td> 8-11 | 1.5 (P) </td>
 		<td> 90 </td>
-		<td> 2 </td>
 		<td> None </td>
 	</tr>
 	<tr>
@@ -180,7 +173,6 @@ The table below outlines all of the clubs currently in the game as well as the r
 		<td> 8-11 | 1.5 </td>
 		<td> 8-11 | 1.5 </td>
 		<td> 6-13 | 1.5 </td>
-		<td> N/A </td>
 		<td> N/A </td>
 		<td> None </td>
 	</tr>
@@ -214,7 +206,7 @@ If the Power roll hits the highest value (EX: D20 rolls a 20), the distance calc
 If the Power roll does not meet the roll requirement, The distance calculation starts with the following:
  - Pd = Aim Point Distance * (Power Roll / Power Req)
 
-#### Primary and Secondary - Attributes that affect Distance
+#### Primary and Secondary - Attributes that affect Power Distance
 If both attributes meet their breakpoints, no additional calculation is necessary
 
 If Primary / Secondary attribute fails to meet breakpoint, we find the difference between the roll and the breakpoint. The chart below outlines how it affects distance:
@@ -267,7 +259,87 @@ If Primary / Secondary attribute fails to meet breakpoint, we find the differenc
 	</tr>
 </table>
     
-Distance calculation is as follows:
- - Distance = Pd - ( [ Pd * Primary ] + [ Pd * Secondary ] )
+Distance calculation is as follows: (Yd = Y Distance)
+ - Yd = Pd - ( [ Pd * Primary ] + [ Pd * Secondary ] )
+
+#### Control - Main attribute that affects Draw/Fade 
+- For every shot, the "aim line" and intended ball flight is **always** straight.
+- Shot modifiers can alter this behavior to allow for intended draw/fade path (explained in shot modifiers)
+- The Control roll designates if a ball will stay on path or hook/draw/fade/slice.
+- Control roll below breakpoint = Hook/Draw (Left)
+- Control roll above breakpoint = Fade/Slice (Right)
+- The table below helps determine how far off the ball flight is
+
+<table>
+	<tr>
+		<th> Difference </th>
+		<th> x% of Total Distance </th>
+	</tr>
+	<tr>
+		<td> 1 </td>
+		<td> 2% </td>
+	</tr>
+	<tr>
+		<td> 2 </td>
+		<td> 4% </td>
+	</tr>
+	<tr>
+		<td> 3 </td>
+		<td>6% </td>
+	</tr>
+	<tr>
+		<td> 4 </td>
+		<td> 8% </td>
+	</tr>
+	<tr>
+		<td> 5 </td>
+		<td> 10% </td>
+	</tr>
+	<tr>
+		<td> 6 </td>
+		<td> 12% </td>
+	</tr>
+	<tr>
+		<td> 7 </td>
+		<td> 14% </td>
+	</tr>
+	<tr>
+		<td> 8 </td>
+		<td> 16% </td>
+	</tr>
+</table>
+
+The following equation determines the distance to the left/right the ball landed relative to path. 
+ - (Xd = X Distance, Cd = Control Difference %)
+
+Xd = Yd * Cd 
+
+#### Combined Distance Calculations
+To summarize, the following is a quick recap of all calculations. 
+
+Pd = Power Distance
+- IF Power Roll >= Power Req: Pd = Aim Point Distance
+- IF Power Roll == highest roll value: Pd = Aim Point Distance + (APD * 10%)
+- IF Power Roll < Power Req: Pd = Aim Point Distance * (Power Roll / Power Req) 
+
+Yd = Y Distance
+Yd = Pd - ( [ Pd * Primary ] + [ Pd * Secondary ] )
+
+Xd = X Distance, Cd = Control Difference %
+Xd = Yd * Cd
+
+Net Yd = Yd - Xd
+
+Distance displayed as [Yd , Xd]
+ - Move down aim path to Yd yards, then move left/right Xd yards.
+
+#### Finesse Kick / Rollout
+
+## Putting
+The putting process is different from any other golf shot because it only has one lie type (Unless modified) and stays grounded. The ball is subject to slopes and undulations across the green. Each Hole comes with a "Green Map" showing the different areas that are sloped, the direction they slope towards, as well as any modifiers that area will have on a putt.
+Green Modifiers affect the following:
+ - Distance (Uphill / Downhill): Affects the Power Roll
+ - Direction (Left / Right): Affects the Control roll
+ - A combination of both
 
 
