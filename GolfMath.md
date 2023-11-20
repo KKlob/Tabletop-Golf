@@ -24,6 +24,7 @@ Attributes determine the Golfer's strengths and weaknesses. Clarity and Simplici
 
 ## Clubs
 Every club has it's own features for roll requirements as well as how a golfer's stats affect the swing. Each category of club (Driver, Fairway Wood, Iron, Wedge, Putter) will have different ways stats affect a swing result as well as within each category of club. A club's Power roll is always used as the Primary value for distance calculation. A club will also have a combination of two attributes that will weigh into the distance calculation (Technique / Control / Finesse)
+*Note the Putter has a range for Power and does not have a Finesse Roll. The Putting section will explain why.
 
 The table below outlines all of the clubs currently in the game as well as the roll requirements and modifiers for each.
 
@@ -169,10 +170,10 @@ The table below outlines all of the clubs currently in the game as well as the r
 	<tr>
 		<td> Rental </td>
 		<td> Putter (D20) </td>
-		<td> 14 | 1.5 </td>
 		<td> 8-11 | 1.5 </td>
-		<td> 8-11 | 1.5 </td>
-		<td> 6-13 | 1.5 </td>
+		<td> 8-11 | 1.5 (P) </td>
+		<td> 8-11 | 1.5 (S) </td>
+		<td> N/A </td>
 		<td> N/A </td>
 		<td> None </td>
 	</tr>
@@ -336,10 +337,173 @@ Distance displayed as [Yd , Xd]
 #### Finesse Kick / Rollout
 
 ## Putting
-The putting process is different from any other golf shot because it only has one lie type (Unless modified) and stays grounded. The ball is subject to slopes and undulations across the green. Each Hole comes with a "Green Map" showing the different areas that are sloped, the direction they slope towards, as well as any modifiers that area will have on a putt.
+The putting process is different from any other golf shot because it only has one lie type (Unless modified) and stays grounded. The ball is subject to power, slopes and undulations across the green. Each Hole comes with a "Green Map" showing the different areas that are sloped, the direction they slope towards, as well as any modifiers that area will have on a putt.
+
+Putters will always have a range for Power instead of a general check to allow for shot / long putts. They will also only have two additional attributes labeled Primary and Secondary. These represent the line you choose. 
+
 Green Modifiers affect the following:
  - Distance (Uphill / Downhill): Affects the Power Roll
- - Direction (Left / Right): Affects the Control roll
+ - Direction (Left / Right): Affects the Primary/Secondary Attribute Rolls
  - A combination of both
 
+After determining the Green modifiers, the process and calculation are as follows:
 
+#### Distance:
+Calculate distance (in ft.) from pin by drawing a straight line from ball to pin.
+Rolling Power within putter's Power req means good speed
+ - Over breakpoint: too much speed
+ - Under breakpoint: too little speed
+
+The table below describes how Over/Under breakpoint translates to distance:
+<table>
+	<tr>
+		<th> Over / Under </th>
+		<th> % Distance </th>
+	</tr>
+	<tr>
+		<td> 1 </td>
+		<td> 3% </td>
+	</tr>
+	<tr>
+		<td> 2 </td>
+		<td> 6% </td>
+	</tr>
+	<tr>
+		<td> 3 </td>
+		<td> 9% </td>
+	</tr>
+	<tr>
+		<td> 4 </td>
+		<td> 12% </td>
+	</tr>
+	<tr>
+		<td> 5 </td>
+		<td> 15% </td>
+	</tr>
+	<tr>
+		<td> 6 </td>
+		<td> 18% </td>
+	</tr>
+	<tr>
+		<td> 7 </td>
+		<td> 21% </td>
+	</tr>
+	<tr>
+		<td> 8 </td>
+		<td> 24% </td>
+	</tr>
+</table>
+
+Putt Power Distance = Putt Distance +/- (Putt Distance * Power Difference %) *Rounded to nearest 0.5 ft
+
+EX: For a 20ft. putt with no green modifiers:
+ - within breakpoint: Distance = Putt Distance
+ - Over 2: Distance = Putt Distance + (Putt Distance * 6%) | 21.2 -> 21 ft Distance
+ - Under 4: Distance = Putt Distance - (Putt Distance * 12%) | 17.6 -> 18ft Distance
+
+#### Primary / Secondary Club attributes - Distance Calculation
+The Primary and Secondary club attributes will influence distance in that they represent the line you take. Green modifiers may affect one or both of the Rolls for these attributes.
+
+ - Over: Right of line
+ - Under: Left of line
+
+The table below describes how Over/Under breakpoints influence distance:
+<table>
+	<tr>
+		<th> Over/Under </th>
+		<th> Primary % </th>
+		<th> Secondary % </th>
+	</tr>
+	<tr>
+		<td> 1 </td>
+		<td> 3% </td>
+		<td> 1% </td>
+	</tr>
+	<tr>
+		<td> 2 </td>
+		<td> 6 % </td>
+		<td> 3% </td>
+	</tr>
+	<tr>
+		<td> 3 </td>
+		<td> 9% </td>
+		<td> 5% </td>
+	</tr>
+	<tr>
+		<td> 4 </td>
+		<td> 12% </td>
+		<td> 7% </td>
+	</tr>
+	<tr>
+		<td> 5 </td>
+		<td> 15% </td>
+		<td> 9% </td>
+	</tr>
+	<tr>
+		<td> 6 </td>
+		<td> 18% </td>
+		<td> 11% </td>
+	</tr>
+	<tr>
+		<td> 7 </td>
+		<td> 21% </td>
+		<td> 13% </td>
+	</tr>
+	<tr>
+		<td> 8 </td>
+		<td> 24% </td>
+		<td> 15% </td>
+	</tr>
+</table>
+
+Primary Distance (Left/Right) = Putt Distance * Primary Difference %
+Secondary Distance (Left/Right): Putt Distance * Secondary Difference %
+
+These two will determine how far off the line a putt is as well as what direction it went.
+
+#### Bringing Putt Power Distance + Primary/Secondary Distance together
+
+Bringing back our Power Distance math:
+Putt Power Distance = Putt Distance +/- (Putt Distance * Power Difference %) *Rounded to nearest 0.5 ft
+
+Combining this with our previous 20ft. putt example
+For a 20ft. putt with no green modifiers:
+Power: hit | Technique: -1 | Control: +2
+Power Distance =  20ft (Hit within breakpoint)
+Primary (Technique): 20ft * 3% = 1ft. left
+Secondary (Control): 20ft * 3% = 1ft. right
+
+In this scenario, the Primary and Secondary traits would cover each other and the putt would then end with a luck check. We end with a luck check as Putting (and golf in general) does have a certain amount of luck to it. The following will outline Putting rules:
+ - Putts within 3ft. are a standard tap in. 
+ - Putts outside 3ft. must be rolled and will have this gameplay flow:
+	 - distance will be counted, aim line drawn and Green modifiers applied to the putt
+	 - Roll is done for each of Putter's attributes
+	 - Putt roll is calculated
+		 - IF Putt Power Distance is on point and Primary/Secondary keep ball on line, a luck check is done
+			 - Base check is TBD, if passed ball is made
+				 - luck roll is based on putt distance, number of green modifiers, and a golfer's luck attribute
+			 - If luck check fails, ball just misses and is considered a tap in
+		- Else IF Putt Power Distance is on point and Primary/Secondary do not keep ball in line
+			- calculate left/right distance, move ball position to new position.
+				- IF Ball is within 3ft. = tap in
+				- ELSE Roll new putt
+		- ELSE 
+			- calculate Putt Power Distance and Primary/Secondary Distances, calculate new ball position and place.
+				- IF within 3ft. = tap in
+				- ELSE Roll new putt
+		
+## Luck Check
+Luck check is based on the following traits of any shot
+ - A Golfer's Luck attribute
+ - The shot's Distance relative to it's max distance (N/A on Putters | Calc'd on Putt Distance instead)
+ - The anticipated lie modifiers (Green Modifiers for Putting)
+ - Any weather conditions that may apply
+
+***** NOTE: LUCK IS ONLY IMPLEMENTED FOR PUTTING *****
+
+A Luck Check is done any time a Player uses one of their "Lucky Bounce" charges (Not available while putting) or whenever a shot is made (When applicable for a putter)
+
+#### Luck Check for Putting
+A luck check for putting is done whenever a putt is on line and hit with good power. Hitting core requirements for the other rolls helps decrease the luck requirement. A golfer's Luck attribute will also decrease the Luck requirement. The luck check is set by the following math:
+
+Luck Req = 4 (Base Luck Req) + # of Green Modifiers + (Distance / 3) - (1 * # of core req hit) - (Golfer Luck attribute * 1.5)
