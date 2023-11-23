@@ -2,6 +2,9 @@
 
 This will be a working document on how the stats, clubs, swings, and distances are done. This will provide the basic structure for the math and code that follows.
 
+Some things to note:
+ - Each hex on a hole map represents 10 yards. Once on the green each hex represents 1ft. The math below conforms to this standard of rounding.
+
 ## Attributes
 Attributes determine the Golfer's strengths and weaknesses. Clarity and Simplicity in attributes is top-most priority as it will drive what clothes / clubs / shot modifiers / abilities a player will choose to get their Golfer ahead of the competition. A Golfer's game has been divided into 4 main swing attributes and a luck attribute (as luck is a functional component of the real game). Any golf club will have a base modifier for each attribute (X) that helps determine how a player's skill influences the shot (rounded to the nearest 0.5). Some clubs take advantage of a high-skill player while others offer more forgiveness for low-skilled players. Clothes will also add certain modifiers to a golfer's stats. 
 
@@ -23,55 +26,11 @@ Attributes determine the Golfer's strengths and weaknesses. Clarity and Simplici
 #### Luck: Influences kick + lucky saving throws. Main influence in determining hole outs vs. tap-in putts.
 
 ## Clubs
-Every club has it's own features for roll requirements as well as how a golfer's stats affect the swing. Each category of club (Driver, Fairway Wood, Iron, Wedge, Putter) will have different ways stats affect a swing result as well as within each category of club. A club's Power roll is always used as the Primary value for distance calculation. A club will also have a combination of two attributes that will weigh into the distance calculation (Technique / Control / Finesse)
+Every club has it's own features for roll requirements as well as how a golfer's stats affect the swing. Each club will have different ways stats affect a swing result as well as different roll requirements. A club's Power roll is always used as the Primary value for distance calculation. A club will also have a combination of two attributes that will weigh into the distance calculation (Technique / Control / Finesse)
+
 *Note the Putter has a range for Power and does not have a Finesse Roll. The Putting section will explain why.
 
 The table below outlines all of the clubs currently in the game as well as the roll requirements and modifiers for each.
-
-<table>
-	<tr>
-		<th>Club Category</th>
-		<th> High Req </th>
-		<th> Medium Req </th>
-		<th> Low Req </th>
-	</tr>
-	<tr>
-		<td> Drivers </td>
-		<td> Power / Technique / Control </td>
-		<td> Control </td>
-		<td> Finesse </td>
-	</tr>
-	<tr>
-		<td> Fairway Woods </td>
-		<td> Power / Technique </td>
-		<td> Control </td>
-		<td> Finesse </td>
-	</tr>
-	<tr>
-		<td>Longer Irons (3i - 6i) </td>
-		<td> Power / Technique / Control </td>
-		<td> Technique / Control / Finesse </td>
-		<td> Finesse </td>
-	</tr>
-	<tr>
-		<td> Shorter Irons (7i - 9i) </td>
-		<td> Technique / Finesse </td>
-		<td> Power / Technique / Finesse / Control </td>
-		<td> Control </td>
-	</tr>
-	<tr>
-		<td> Wedges </td>
-		<td> Technique / Finesse </td>
-		<td> Power / Technique / Finesse </td>
-		<td> Power / Control </td>
-	</tr>
-	<tr>
-		<td> Putters </td>
-		<td> Technique / Control </td>
-		<td> Power </td>
-		<td> Finesse </td>
-	</tr>
-</table>
 
 ----------------------
 ( P ) = Primary Attribute
@@ -92,79 +51,69 @@ The table below outlines all of the clubs currently in the game as well as the r
 		<td> Driver (D20) </td>
 		<td> 18 | 1.5</td>
 		<td> 8-11 | 1.5 (P)</td>
-		<td> 7-12 | 1.5 (S)</td>
+		<td> 8-11 | 1.5 (S)</td>
 		<td> 5-14 | 1.5</td>
 		<td> 230 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> 3 Fairway Wood (D20) </td>
+		<td> Fairway Wood (D20) </td>
 		<td> 17 | 1.5</td>
 		<td> 8-11 | 1.5 (P) </td>
-		<td> 7-12 | 1.5 (S) </td>
+		<td> 8-11 | 1.5 (S) </td>
 		<td> 6-13 | 1.5</td>
-		<td> 190 </td>
+		<td> 200 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> 6 Iron (D20) </td>
+		<td> Long Iron (D20) </td>
 		<td> 16 | 1.5 </td>
 		<td> 8-11 | 1.5 (P) </td>
 		<td> 7-12 | 1.5 (S) </td>
 		<td> 6-13 | 1.5 </td>
-		<td> 175 </td>
+		<td> 170 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
-		<td> 7 Iron (D20) </td>
+		<td> Medium Iron (D20) </td>
 		<td> 15 | 1.5 </td>
-		<td> 8-11 | 1.5 (P) </td>
+		<td> 7-12 | 1.5 (P) </td>
+		<td> 7-12 | 1.5 (S) </td>
+		<td> 6-13 | 1.5 </td>
+		<td> 150 </td>
+		<td> None </td>
+	</tr>
+	<tr>
+		<td> Rental </td>
+		<td> Short Iron (D20) </td>
+		<td> 14 | 1.5 </td>
+		<td> 7-12 | 1.5 (P) </td>
 		<td> 7-12 | 1.5 (S)</td>
 		<td> 7-12 </td>
-		<td> 160 </td>
-		<td> None </td>
-	</tr>
-	<tr>
-		<td> Rental </td>
-		<td> 8 Iron (D20) </td>
-		<td> 14 | 1.5 </td>
-		<td> 8-11 | 1.5 (P) </td>
-		<td> 7-12 | 1.5 </td>
-		<td> 7-12 | 1.5 (S) </td>
-		<td> 145 </td>
-		<td> None </td>
-	</tr>
-	<tr>
-		<td> Rental </td>
-		<td> 9 Iron (D20) </td>
-		<td> 13 | 1.5 </td>
-		<td> 8-11 | 1.5 (P) </td>
-		<td> 7-12 | 1.5 </td>
-		<td> 7-12 | 1.5 (S) </td>
 		<td> 130 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
 		<td> Pitching Wedge (D20) </td>
-		<td> 12 | 1.5 </td>
-		<td> 8-11 | 1.5 (S) </td>
+		<td> 13 | 1.5 </td>
+		<td> 7-12 | 1.5 (S) </td>
 		<td> 6-13 | 1.5</td>
 		<td> 8-11 | 1.5 (P) </td>
-		<td> 115 </td>
+		<td> 110 </td>
 		<td> None </td>
 	</tr>
 	<tr>
 		<td> Rental </td>
 		<td> Sand Wedge (D20) </td>
-		<td> 11 | 1.5 </td>
+		<td> 12 | 1.5 </td>
 		<td> 8-11 | 1.5 (S) </td>
 		<td> 6-13 | 1.5 </td>
 		<td> 8-11 | 1.5 (P) </td>
-		<td> 90 </td>
+		<td> 80 </td>
 		<td> None </td>
 	</tr>
 	<tr>
@@ -331,10 +280,11 @@ Xd = Yd * Cd
 
 Net Yd = Yd - Xd
 
-Distance displayed as [Yd , Xd]
- - Move down aim path to Yd yards, then move left/right Xd yards.
+Distance displayed as [Yd , Xd] rounded to the nearest 10 yards.
+ - Move down aim path Yd yards, then move left/right Xd yards.
 
-#### Finesse Kick / Rollout
+#### Finesse Kick Check + Lie Modifiers
+
 
 ## Putting
 The putting process is different from any other golf shot because it only has one lie type (Unless modified) and stays grounded. The ball is subject to power, slopes and undulations across the green. Each Hole comes with a "Green Map" showing the different areas that are sloped, the direction they slope towards, as well as any modifiers that area will have on a putt.
@@ -349,7 +299,7 @@ Green Modifiers affect the following:
 After determining the Green modifiers, the process and calculation are as follows:
 
 #### Distance:
-Calculate distance (in ft.) from pin by drawing a straight line from ball to pin.
+Calculate distance (in ft.) from pin by drawing a straight line from ball to pin. 
 Rolling Power within putter's Power req means good speed
  - Over breakpoint: too much speed
  - Under breakpoint: too little speed
@@ -394,7 +344,7 @@ The table below describes how Over/Under breakpoint translates to distance:
 	</tr>
 </table>
 
-Putt Power Distance = Putt Distance +/- (Putt Distance * Power Difference %) *Rounded to nearest 0.5 ft
+Putt Power Distance = Putt Distance +/- (Putt Distance * Power Difference %) *Rounded to nearest 1 ft.
 
 EX: For a 20ft. putt with no green modifiers:
  - within breakpoint: Distance = Putt Distance
@@ -464,7 +414,7 @@ These two will determine how far off the line a putt is as well as what directio
 #### Bringing Putt Power Distance + Primary/Secondary Distance together
 
 Bringing back our Power Distance math:
-Putt Power Distance = Putt Distance +/- (Putt Distance * Power Difference %) *Rounded to nearest 0.5 ft
+Putt Power Distance = Putt Distance +/- (Putt Distance * Power Difference %) *Rounded to nearest 1 ft
 
 Combining this with our previous 20ft. putt example
 For a 20ft. putt with no green modifiers:
@@ -473,7 +423,9 @@ Power Distance =  20ft (Hit within breakpoint)
 Primary (Technique): 20ft * 3% = 1ft. left
 Secondary (Control): 20ft * 3% = 1ft. right
 
-In this scenario, the Primary and Secondary traits would cover each other and the putt would then end with a luck check. We end with a luck check as Putting (and golf in general) does have a certain amount of luck to it. The following will outline Putting rules:
+In this scenario, the Primary and Secondary traits would cover each other and the putt would then end with a luck check. We end with a luck check as Putting (and golf in general) does have a certain amount of luck to it. 
+
+#### Putting Rules
  - Putts within 3ft. are a standard tap in. 
  - Putts outside 3ft. must be rolled and will have this gameplay flow:
 	 - distance will be counted, aim line drawn and Green modifiers applied to the putt
@@ -506,4 +458,9 @@ A Luck Check is done any time a Player uses one of their "Lucky Bounce" charges 
 #### Luck Check for Putting
 A luck check for putting is done whenever a putt is on line and hit with good power. Hitting core requirements for the other rolls helps decrease the luck requirement. A golfer's Luck attribute will also decrease the Luck requirement. The luck check is set by the following math:
 
-Luck Req = 4 (Base Luck Req) + # of Green Modifiers + (Distance / 3) - (1 * # of core req hit) - (Golfer Luck attribute * 1.5)
+Luck Req (D20) = 4 (Base Luck Req) + # of Green Modifiers + (Distance / 3) - (1 * # of core req hit) - (Golfer Luck attribute * 1.5)
+
+ - Beat the Luck Check = Make the putt
+ - Lose the Luck Check = Good lag for tap-in
+
+#### Luck Check for all other shots
