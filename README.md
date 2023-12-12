@@ -1,3 +1,14 @@
+************ RE-WRITE GAME *************************
+Game will be made in GameMaker
+Sprites will be made using PiskelApp.com
+
+Idea is a 32-bit style Golf RPG game with dice roll mechanics to describe swing
+Each shot will have certain requirements based on club selected, modifiers being used, wind/lie conditions
+Player will roll a set number of die and chose how to apply values to shot
+Will still use some concepts already thought out, just implemented in a different way
+
+
+
 # Tabletop Golf
 The premise is bringing golf to the tabletop via dice roll mechanics and a DnD style equipment system. Solo play is available though it is encouraged to play as 2-4 players + 1 GM. GM is an optional role but it makes it more fun. The twist is the game is a PvP type game. As in golf, the objective is to score the lowest you can and beat the other golfers in your group. You are competing against the other players. Along your round of 18 holes, you will have opportunities to acquire new equipment in the form of Clothes and Clubs. You will also be able to grab shot modifiers that can change the roll requirements for a shot as well as one-time-use abilities that can help your golf game or hamper an opponent. Who will come out on top?
 
